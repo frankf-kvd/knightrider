@@ -1,13 +1,14 @@
+let x = 0
+let inkr = 1
 basic.forever(function () {
-    for (let i = 0; i <= 4; i++) {
-        led.plot(i, 0)
-        basic.pause(100)
-        led.unplot(i, 0)
-    }
-    for (let j = 4; j >= 0; j--) 
-    {
-        led.plot(j, 0);
-        basic.pause(100);
-        led.unplot(j, 0);
+	
+})
+basic.forever(function () {
+    led.plot(x, 0)
+    basic.pause(100)
+    led.unplot(x, 0)
+    x += inkr
+    if (x == 4 || x == 0) {
+        inkr = inkr * -1
     }
 })
